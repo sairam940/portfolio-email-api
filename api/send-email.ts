@@ -21,20 +21,19 @@ export default async function handler(
   }
 
   try {
-    const { name, email, message } = req.body;
-
-    if (!name || !email || !message) {
+    const { senderEmail, message } = req.body;
+    
+    if (!senderEmail || !message) {
       return res.status(400).json({ error: "Missing fields" });
     }
 
     await resend.emails.send({
       from: "Portfolio <onboarding@resend.dev>",
       to: "sai.ram940@gmail.com",
-      reply_to: email,
-      subject: `Portfolio Contact — ${name}`,
+      reply_to: senderEmail,
+      subject: `Portfolio Contact`,
       html: `
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Email:</strong> ${senderEmail}</p>
         <p><strong>Message:</strong></p>
         <p>${message}</p>
       `
