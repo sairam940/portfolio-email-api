@@ -29,7 +29,7 @@ export default async function handler(
 
     await resend.emails.send({
       from: "Portfolio <onboarding@resend.dev>",
-      to: "sairam940@gmail.com",
+      to: "sai.ram940@gmail.com",
       reply_to: email,
       subject: `Portfolio Contact — ${name}`,
       html: `
