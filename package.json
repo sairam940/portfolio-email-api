@@ -1,0 +1,12 @@
+{
+  "name": "portfolio-email-api",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "resend": "^3.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.3",
+    "@vercel/node": "^2.3.0"
+  }
+}
